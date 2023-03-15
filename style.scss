@@ -1,0 +1,368 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.cdnfonts.com/css/arca-majora-3);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(mobile_style.scss);
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  ul {
+    list-style-type: none;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  button {
+    border: none;
+    background-color: #fff;
+    color: #fff;
+  }
+}
+.notification-top-bar {
+  cursor: default;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #000000;
+  background: #f1f1f1;
+  p {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+header {
+  cursor: pointer;
+  @include flexRow;
+
+  justify-content: space-between;
+  padding: 10px 40px;
+
+  .menu {
+    @include flexRow;
+    &__link {
+      margin-right: 40px;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      letter-spacing: 0.175em;
+      text-transform: uppercase;
+    }
+  }
+  .profile {
+    display: flex;
+    justify-content: space-between;
+    &__icon {
+      margin-right: 24px;
+      margin-bottom: 10px;
+    }
+  }
+}
+main {
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+
+  section {
+    @include flexWrap;
+    .description {
+      width: 50%;
+      height: 400px;
+      @include flexCol;
+
+      justify-content: space-between;
+      padding: 55px 0 0 80px;
+
+      &__title {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 130%;
+        margin-bottom: 126px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      &__text {
+        width: 600px;
+        height: 138px;
+        margin-bottom: 80px;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 167.5%;
+      }
+      &__link {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 167.5%;
+      }
+      &__pictures {
+        position: relative;
+        width: 50%;
+        margin: 0;
+        img {
+          width: 100%;
+          margin: 0px;
+        }
+      }
+    }
+    .pictures {
+      width: 50%;
+      padding: 80px 40px;
+    }
+    .section_2 {
+      width: 50%;
+      @include flexCol;
+      justify-content: center;
+      padding: 80px 0 0 80px;
+      &__title {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 25px;
+      }
+      &__list {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        &_item {
+          display: flex;
+          align-items: start;
+          justify-content: end;
+          font-family: "Arca Majora 3", sans-serif;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 167.5%;
+          margin-bottom: 16px;
+          display: flex;
+          flex-direction: row;
+          img {
+            margin-right: 9px;
+            position: relative;
+            top: 5px;
+          }
+        }
+      }
+    }
+    .section_3 {
+      width: 50%;
+      @include flexCol;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0 0 80px;
+      &__title {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 143%;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .fav {
+    width: 100%;
+    background-color: #fff;
+    color: #000000;
+    padding: 80px 40px;
+    margin-bottom: 90px;
+    @include flexCol;
+    &__title {
+      margin-bottom: 42px;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 130%;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    &__swiper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .product {
+      width: 290px;
+      height: 360px;
+      &__image {
+        a img {
+          width: 100%;
+          height: 350px;
+        }
+        .tag img {
+          position: relative;
+          top: 36px;
+          left: 12px;
+        }
+      }
+      &__name h5 {
+        margin-top: 8px;
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 168%;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      &__rate {
+        display: flex;
+        flex-direction: row;
+        img {
+          margin-right: 4px;
+        }
+      }
+      &__price {
+        margin-right: 8px;
+        font-family: "Oswald";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 168%;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #353535;
+      }
+    }
+  }
+}
+footer {
+  @include flexCol;
+  width: 100%;
+  background: #f1f1f1;
+  .copy {
+    color: #c4c4c4;
+    text-align: center;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 167.5%;
+    margin-bottom: 20px;
+  }
+  .main-footer {
+    width: 100%;
+    height: 400px;
+    @include flexRow;
+    justify-content: space-between;
+    background: #f1f1f1;
+    padding: 80px 155px;
+    .footer-logo {
+      margin-top: 70px;
+      position: absolute;
+      left: -5px;
+      width: 400px;
+      z-index: 0;
+    }
+    .newsletter {
+      z-index: 100;
+      max-width: 460px;
+      width: 100%;
+      font-family: Open Sans, sans-serif;
+      @include flexCol;
+      h1 {
+        font-family: "Work Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: left;
+        letter-spacing: 0.165em;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      form {
+        input {
+          width: 400px;
+          border: none;
+          background: none;
+          border-bottom: 1px solid #c4c4c4;
+          padding-bottom: 16px;
+          ::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+        button {
+          cursor: pointer;
+          background: none;
+        }
+      }
+      .socials {
+        font-family: Open Sans, sans-serif;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        margin-top: 1.5rem;
+        list-style: none;
+        display: flex;
+        li {
+          margin-right: 20px;
+        }
+      }
+    }
+    .links {
+      @include flexRow;
+      justify-content: space-between;
+      .list {
+        @include flexCol;
+        justify-content: space-between;
+        margin-right: 150px;
+        &__title {
+          margin-bottom: 32px;
+          font-family: "Work Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          letter-spacing: 0.165em;
+          text-transform: uppercase;
+          color: #353535;
+        }
+        li a {
+          text-decoration: none;
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 167.5%;
+          color: #7e7e7e;
+        }
+      }
+    }
+  }
+}

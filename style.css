@@ -1,0 +1,363 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+@import url(https://fonts.cdnfonts.com/css/arca-majora-3);
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(mobile_style.scss);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body ul {
+  list-style-type: none;
+}
+body img {
+  max-width: 100%;
+  display: block;
+}
+body button {
+  border: none;
+  background-color: #fff;
+  color: #fff;
+}
+
+.notification-top-bar {
+  cursor: default;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #000000;
+  background: #f1f1f1;
+}
+.notification-top-bar p {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+header {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+header .menu {
+  display: flex;
+  flex-direction: row;
+}
+header .menu__link {
+  margin-right: 40px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.175em;
+  text-transform: uppercase;
+}
+header .profile {
+  display: flex;
+  justify-content: space-between;
+}
+header .profile__icon {
+  margin-right: 24px;
+  margin-bottom: 10px;
+}
+
+main {
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+}
+main section {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section .description {
+  width: 50%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 55px 0 0 80px;
+}
+main section .description__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 130%;
+  margin-bottom: 126px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+main section .description__text {
+  width: 600px;
+  height: 138px;
+  margin-bottom: 80px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 167.5%;
+}
+main section .description__link {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 167.5%;
+}
+main section .description__pictures {
+  position: relative;
+  width: 50%;
+  margin: 0;
+}
+main section .description__pictures img {
+  width: 100%;
+  margin: 0px;
+}
+main section .pictures {
+  width: 50%;
+  padding: 80px 40px;
+}
+main section .section_2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 0 80px;
+}
+main section .section_2__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+main section .section_2__list {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+main section .section_2__list_item {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  font-family: "Arca Majora 3", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 167.5%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+}
+main section .section_2__list_item img {
+  margin-right: 9px;
+  position: relative;
+  top: 5px;
+}
+main section .section_3 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 80px;
+}
+main section .section_3__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 143%;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+main .fav {
+  width: 100%;
+  background-color: #fff;
+  color: #000000;
+  padding: 80px 40px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+}
+main .fav__title {
+  margin-bottom: 42px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 130%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+main .fav__swiper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .fav .product {
+  width: 290px;
+  height: 360px;
+}
+main .fav .product__image a img {
+  width: 100%;
+  height: 350px;
+}
+main .fav .product__image .tag img {
+  position: relative;
+  top: 36px;
+  left: 12px;
+}
+main .fav .product__name h5 {
+  margin-top: 8px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 168%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+main .fav .product__rate {
+  display: flex;
+  flex-direction: row;
+}
+main .fav .product__rate img {
+  margin-right: 4px;
+}
+main .fav .product__price {
+  margin-right: 8px;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 168%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #353535;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #f1f1f1;
+}
+footer .copy {
+  color: #c4c4c4;
+  text-align: center;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 167.5%;
+  margin-bottom: 20px;
+}
+footer .main-footer {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 80px 155px;
+}
+footer .main-footer .footer-logo {
+  margin-top: 70px;
+  position: absolute;
+  left: -5px;
+  width: 400px;
+  z-index: 0;
+}
+footer .main-footer .newsletter {
+  z-index: 100;
+  max-width: 460px;
+  width: 100%;
+  font-family: Open Sans, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+footer .main-footer .newsletter h1 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  letter-spacing: 0.165em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+footer .main-footer .newsletter form input {
+  width: 400px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 16px;
+}
+footer .main-footer .newsletter form input ::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+}
+footer .main-footer .newsletter form input ::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+}
+footer .main-footer .newsletter form button {
+  cursor: pointer;
+  background: none;
+}
+footer .main-footer .newsletter .socials {
+  font-family: Open Sans, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin-top: 1.5rem;
+  list-style: none;
+  display: flex;
+}
+footer .main-footer .newsletter .socials li {
+  margin-right: 20px;
+}
+footer .main-footer .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .main-footer .links .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 150px;
+}
+footer .main-footer .links .list__title {
+  margin-bottom: 32px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.165em;
+  text-transform: uppercase;
+  color: #353535;
+}
+footer .main-footer .links .list li a {
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 167.5%;
+  color: #7e7e7e;
+}/*# sourceMappingURL=style.css.map */
